@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+.container {
+    width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #9932CC;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container_wraper {
+    width: 1200px;
+    margin: 50px auto 0 auto;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 250px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
-.App-link {
-  color: #61dafb;
+.image {
+    width: 100%;
+    height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image:nth-child(2) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+.image:nth-child(3) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.image:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}
+
+.image:nth-child(5) {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.image:nth-child(6) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 3;
+}
+
+.cover {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.form-feedback {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 700px;
+    height: 700px;
+    position: fixed;
+    z-index: 100;
+    top: calc(50vh - 350px);
+    left: calc(50vw - 350px);
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.close {
+    width: 40px;
+    height: 40px;
+    margin-left: 94%;
+}
+
+.bigImage {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 840px) {
+    .container_wraper {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .image:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+    .image:nth-child(2) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+    }
+    .image:nth-child(3) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .image:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+    }
+    .image:nth-child(5) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+    }
+    .image:nth-child(6) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 3;
+    }
+}
+
+@media (max-width: 450px) {
+    .container_wraper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .image {
+        margin: auto;
+    }
+    .image:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+    .image:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .image:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    .image:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    .image:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    .image:nth-child(6) {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 6;
+    }
 }
