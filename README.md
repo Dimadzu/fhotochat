@@ -17,22 +17,9 @@ Test task at position trainee frontend developer
 ###function to get data from server
 
 
-<
-getPhoto = () => {
+<getPhoto = () => {
         fetch(
                 `https://boiling-refuge-66454.herokuapp.com/images`
-            )
-            .then(response => {
-                return response.json();
-            })
-            .then(photo => {
-                    this.setState({
-                        allPhoto: photo
-                    })
-                }
-
-            )
-    }
-    >
+            ) >
 
 
