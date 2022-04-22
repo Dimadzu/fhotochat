@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import { Image } from './component/Galery';
 import { Formfeedback } from './component/Formfeedback';
+import github from './image/github.png';
 
 class App extends React.Component {
     constructor() {
@@ -60,7 +61,12 @@ class App extends React.Component {
     render() {
         return ( < div className = 'container' >
             <
-            header className = 'header' > < /header>  <
+            header className = 'header' >
+            <
+            h2 > Fotochat < /h2> <
+            a href = 'https://github.com/avito-tech/safedeal-frontend-trainee'
+            target = "_blank" > Link on test issue < /a> <
+            /header>  <
             div className = 'container_wraper' >
             <
             Image allPhoto = { this.state.allPhoto }
@@ -70,7 +76,13 @@ class App extends React.Component {
 
             <
             /div>  <
-            footer className = 'footer' > < /footer> <
+            footer className = 'footer' >
+            <
+            a href = 'https://github.com/Dimadzu'
+            target = "_blank" > < img src = { github }
+            /></a >
+            <
+            /footer> <
             div className = "cover hidden"
             id = "cover" > < /div> </div >
 
