@@ -14,10 +14,11 @@ Test task at position trainee frontend developer
 >code fragment
 
 
-######function to get data from server
+###function to get data from server
 
 
-<getPhoto = () => {
+<
+getPhoto = () => {
         fetch(
                 `https://boiling-refuge-66454.herokuapp.com/images`
             )
@@ -31,6 +32,7 @@ Test task at position trainee frontend developer
                 }
 
             )
-    }>
+    }
+    >
 
 
